@@ -2,6 +2,6 @@ from django.shortcuts import redirect
 
 
 def index(request):
-    response = redirect('/home')
+    response = redirect('portfolio/home')
     return response
 

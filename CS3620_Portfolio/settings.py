@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'Hobbies.apps.HobbiesConfig',
     'Portfolio.apps.PortfolioConfig',
     'django.contrib.admin',
     'django.contrib.auth',
