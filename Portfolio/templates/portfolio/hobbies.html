@@ -1,0 +1,20 @@
+{% extends 'portfolio/base.html' %}
+{% block body %}
+    <h1>Portfolio</h1>
+    <h3>A list of my hobbies</h3>
+    {% for hob in hobby_list %}
+
+        <div class="row">
+            <div class="col-md-3 offset-md-2">
+                <img class="card" height="150px" src="{{ hob.hobby_image }}"/>
+            </div>
+            <div class="col-md-4">
+                <h3 class="name">{{ hob.hobby_name }}</h3>
+                <h5 class="description">{{ hob.hobby_description }}</h5>
+            </div>
+            <div class="col-md-2">
+                <a href="{% url 'hobby_detail' hob.id %}" class="btn btn-success">Details</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

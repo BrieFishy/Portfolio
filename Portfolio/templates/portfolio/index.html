@@ -1,0 +1,20 @@
+{% extends 'portfolio/base.html' %}
+{% block body %}
+    <h1>Portfolio</h1>
+    <h3>A list of programming projects I have done</h3>
+    {% for proj in project_list %}
+
+        <div class="row">
+            <div class="col-md-3 offset-md-2">
+                <img class="card" height="150px" src="{{ proj.project_image }}"/>
+            </div>
+            <div class="col-md-4">
+                <h3 class="name">{{ proj.project_name }}</h3>
+                <h5 class="description">{{ proj.project_description }}</h5>
+            </div>
+            <div class="col-md-2">
+                <a href="{% url 'project_detail' proj.id %}" class="btn btn-success">Details</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
