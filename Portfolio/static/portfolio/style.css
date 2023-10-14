@@ -44,7 +44,24 @@ h3.name{
 h5.description{
     font-style: italic;
 }
-div.row{
+div.row-bordered{
     border-style: solid;
     border-color: darkslateblue;
+    margin: 10px;
+    padding: 5px;
+}
+input,button{
+    color: black;
+    background-color: wheat;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 5px;
+    border: black 4px solid;
+}
+input[type=button],input[type=submit],button[type=submit]{
+    color: black;
+    background-color: wheat;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
 }
